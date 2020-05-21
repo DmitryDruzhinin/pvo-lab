@@ -1,0 +1,35 @@
+C0114: Missing module docstring (missing-module-docstring)
+Отсуствует коментарий по назначению данного модуля
+
+C0116: Missing function or method docstring (missing-function-docstring)
+Отсуствуют коментарии по назначению функций
+
+C0103: Constant name "default_accuracy" doesn't conform to UPPER_CASE naming style (invalid-name)
+Имена констант должны состоять из заглавных букв
+
+C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+Не рекоммендуется использовать односимвольные переменные, т.к. сложнее понять их назначение
+
+W0613: Unused argument 'module' (unused-argument)
+Не использованный аргумент в функции
+
+Argument name "ACCURACY" doesn't conform to snake_case naming style (invalid-name)
+Переменные рекоммендуется называть именами, состоящими из строчных букв
+
+C0103: Function name "sumTwoValues" doesn't conform to snake_case naming style (invalid-name)
+Змеиный стиль подразумевает разделение слов, стостящих из строчных букв, нижним подчеркиванием, для функций рекомендуется именно такой стиль
+
+W0611: Unused import sqlite3 (unused-import)
+Импортированная библиотека не использована в программе
+
+test.py:2:0: C0411: standard import "import random" should be placed before "import numpy as np" (wrong-import-order)
+test.py:3:0: C0411: standard import "import sqlite3" should be placed before "import numpy as np" (wrong-import-order)
+Рекомендуемый порядок импортов следующий:
+ 1. Стандартные библиотеки
+ 2. Сторонние бибилотеки
+ 3. Локальные импорты
+
+C0304: Final newline missing (missing-final-newline)
+Отсутсвует пустая линия в конце модуля
