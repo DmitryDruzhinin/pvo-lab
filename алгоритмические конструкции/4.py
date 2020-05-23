@@ -1,16 +1,15 @@
-def is_prime(n):
-    if(n == 1):
-        return False
+n = int(input("enter a natural number: "))
+lst = [2]
+for i in range(3, n + 1, 2):
+    if (i > 10) and (i % 10 == 5):
+        continue
+    for j in lst:
+        if j * j - 1 > i:
+            lst.append(i)
+            break
+        if i % j == 0:
+            break
     else:
-        d = 2
-        while d * d <= n and n % d != 0:
-            d += 1
-        return d * d > n
+        lst.append(i)
 
-
-num = int(input())
-sum = 0
-for i in range(1, num):
-    if (is_prime(i)):
-        sum += i
-print(sum)
+print("the sum of all primes not exceeding", n, ":", (sum(lst)))
