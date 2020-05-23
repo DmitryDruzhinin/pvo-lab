@@ -1,9 +1,2 @@
-file = open("file.txt", "r")
-lines_num = 0
-
-for line in file:
-    if line.strip():
-        lines_num += 1
-
-file.close()
-print(lines_num)
+with open('new_text_document.txt') as f:
+    print(sum(1 for _ in f))
