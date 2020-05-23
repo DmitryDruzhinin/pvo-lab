@@ -1,8 +1,8 @@
-num = int(input())
+num = int(input("enter a natural number: "))
 i = 1
 sum = 0
-while(i < num):
+while(num > i):
     if (i % 10 == 3):
         sum += i
     i += 1
-print(sum)
+print ("the sum of all numbers ending in 3 and not exceeding",(num),":",(sum))
