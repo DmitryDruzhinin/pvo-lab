@@ -1,13 +1,7 @@
 import random
-
-
-def clear(list):
-    return [num for num in list if num % 2 == 0]
-
-
-nums = []
-for i in range(0, 10):
-    nums.append(random.randint(1, 100))
-print(nums)
-
-print(clear(nums))
+n = []
+for i in range(0, 127):
+    n.append(random.randint(1, 128))
+print(n)
+a = [int(x) for x in n if not int(x) % 2]
+print(a)
