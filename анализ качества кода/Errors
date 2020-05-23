@@ -1,4 +1,4 @@
-C0114: Missing module docstring (missing-module-docstring)
+﻿C0114: Missing module docstring (missing-module-docstring)
 Отсуствует коментарий по назначению данного модуля
 
 C0116: Missing function or method docstring (missing-function-docstring)
