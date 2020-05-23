@@ -1,5 +1,3 @@
-print("Input first value")
-first_num = int(input())
-print("Input second value")
-second_num = int(input())
-print(first_num + second_num)
+frst_val = input("input first value: ")
+scnd_val = input("input second value: ")
+print("result", frst_val + scnd_val)
