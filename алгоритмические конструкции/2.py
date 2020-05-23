@@ -1,10 +1,14 @@
-﻿print('введите пол (мужчина/женщина)')
-sex = input()
-print('введите возраст')
-age = int(input())
-if (sex == 'мужчина'):
-    if (age < 65):
-        print('осталось до пенсии:', 65 - age, 'лет')
-elif (sex == 'женщина'):
-    if (age < 60):
-        print('осталось до пенсии:', 60 - age, 'лет')
+﻿age = int(input("your age: "))
+gndr = input("what's your gender? (m/f): ")
+if gndr == "m":
+    if age < 65:
+        print("years remaining to the user until retirement", 65 - age)
+    else:
+        print("you are retired")
+elif gndr == "f":
+    if age < 60:
+        print("years remaining to the user until retirement", 60 - age)
+    else:
+        print("you are retired")
+else:
+    print("not correctly selected gender")
