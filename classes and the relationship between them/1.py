@@ -87,7 +87,7 @@ class WagonPassSit(WagonPass):
         self.comf_type = 'sit'
 
 
-t = Train(int(input ("enter train mass: ")))
+t = Train(int(input("enter train mass: ")))
 t.add_loco()
 t.add_wagon(WagonPass())
 t.add_wagon(WagonCargo())
