@@ -2,7 +2,7 @@ class Loco:
     def __init__(self):
         self._loco = 'oooTT'
 
-    def __repr__(self):
+    def __str__(self):
         return self._loco
 
 
@@ -11,22 +11,20 @@ class Train:
         self._wagons = []
         self._max_weigth = 16383
         self._weight = weight
-        self._loco = None
-        self.type = 'default'
 
-    def add_loco(self):
+    def SetLoco(self):
         self._loco = Loco()
 
-    def add_wagon(self, wagon_type):
+    def AddWagon(self, wagon_type):
         self._wagons.append(wagon_type)
 
-    def run(self):
+    def Run(self):
         if self._weight <= self._max_weigth:
             return True
         else:
             return False
 
-    def __repr__(self):
+    def __str__(self):
         train = str(self._loco)
         for wagon in self._wagons:
             train += str(wagon)
@@ -36,7 +34,7 @@ class Train:
 class TrainPass(Train):
     def __init__(self, _weight):
         super().__init__(_weight)
-        self.type = 'passanger'
+        self.type = 'pass'
 
 
 class TrainCargo(Train):
@@ -53,10 +51,9 @@ class Wagon:
 class WagonPass(Wagon):
     def __init__(self, place=''):
         super().__init__()
-        self.place = place
-        self.type = 'passenger'
+        self.type = 'pass'
 
-    def __repr__(self):
+    def __str__(self):
         return ".[_ _]"
 
 
@@ -65,34 +62,35 @@ class WagonCargo(Wagon):
         super().__init__()
         self.type = 'cargo'
 
-    def __repr__(self):
+    def __str__(self):
         return ".(_ _)"
 
 
-class WagonPassCoupe(WagonPass):
+class WagonCoupe(WagonPass):
     def __init__(self, place=''):
         super().__init__(place)
         self.comf_type = 'coupe'
 
 
-class WagonPassPlat(WagonPass):
+class WagonPlat(WagonPass):
     def __init__(self, place=''):
         super().__init__(place)
         self.comf_type = 'plat'
 
 
-class WagonPassSit(WagonPass):
+class WagonSit(WagonPass):
     def __init__(self, place=''):
         super().__init__(place)
         self.comf_type = 'sit'
 
 
 t = Train(int(input("enter train mass: ")))
-t.add_loco()
-t.add_wagon(WagonPass())
-t.add_wagon(WagonCargo())
+t.SetLoco()
+t.AddWagon(WagonPass())
+t.AddWagon(WagonPass())
+t.AddWagon(WagonCargo())
 print(t)
-ok = t.run()
+ok = t.Run()
 if ok:
     print("ok")
 else:
